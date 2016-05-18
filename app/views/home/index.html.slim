@@ -28,6 +28,22 @@ body
 		.row
 			.col-md-6
 				h2 Видео
-				= videojs_rails sources: { mp4: "http://vjs.zencdn.net/v/oceans.mp4", webm: "http://vjs.zencdn.net/v/oceans.webm", poster: "http://lorempixel.com/400/200"}, width:"400"
+				.embed-responsive.embed-responsive-16by9
+					= videojs_rails sources: { mp4: "http://vjs.zencdn.net/v/oceans.mp4", webm: "http://vjs.zencdn.net/v/oceans.webm", poster: "http://lorempixel.com/400/200"}, width:""
 			.col-md-6
 				h2 Вопросы
+				.panel.panel-primary
+					.panel-heading
+						h4.panel-title Сheck yourself
+						.panel-body
+							h5 Qustion
+							ul.list-group
+								li.list-group-item
+									.radio
+										label
+											input type="radio" answer
+								li.list-group-item
+									.radio
+										label
+											input type="radio" answer	
+							input class="btn btn-default" type="submit" name="check" value="Check!"	
