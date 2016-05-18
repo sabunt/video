@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: alex
+  password: qwerty123
+  pool: 5
+
+development:
+  <<: *default
+  database: video_development
+  username: alex
+  password: qwerty123
+
+test:
+  <<: *default
+  database: video_test
+  username: alex
+  password: qwerty123
